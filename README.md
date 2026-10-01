@@ -1,2 +1,9 @@
-# Netflix-Clone-Web-Application
-The project aims to replicate the user interface of Netflix, a popular streaming platform, employing fundamental web technologies such as HTML, CSS, and JavaScript. The objective is  to create a visually appealing and functional clone that mirrors the core features of Netflix.
+# StreamFlix — Netflix-style clone
+
+The Home page uses **clear web-sourced movie/series artwork** rather than images extracted from the screenshots supplied by the user.
+
+## Important
+- Artwork is loaded from public movie/TV image sources (Netflix, Rotten Tomatoes/Flixster, IMDb-hosted stills, Vogue, Indian entertainment sites, etc.).
+- Because these are remote image URLs, an internet connection is required for the artwork.
+- The screenshots supplied by the user are used only as visual design references.
+- This is an educational front-end project and is not affiliated with Netflix.

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Netflix-style streaming UI clone built with HTML, CSS and JavaScript." />
+  <title>StreamFlix — Netflix Clone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar" id="navbar">
+    <a class="brand" href="index.html" aria-label="StreamFlix home">STREAMFLIX</a>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#tv">TV Shows</a>
+      <a href="#movies">Movies</a>
+      <a href="#new">New & Popular</a>
+      <a href="#my-list">My List</a><a href="subscription.html">Plans</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search">⌕</button>
+      <a class="nav-login home-signout" href="landing.html">Sign Out</a><button class="profile-btn" id="profileBtn" aria-label="Profile menu">
+        <span class="avatar">P</span><span class="chevron">⌄</span>
+      </button>
+    </div>
+    <div class="search-box" id="searchBox">
+      <input id="searchInput" type="search" placeholder="Titles, people, genres" autocomplete="off" />
+    </div>
+    <div class="profile-menu" id="profileMenu">
+      <button>Manage Profiles</button>
+      <button>Account</button>
+      <button>Help Centre</button>
+      <button>Sign out of StreamFlix</button>
+    </div>
+  </header>
+
+  
+<main>
+  <section class="hero screenshot-hero" id="home">
+    <div class="hero-backdrop"></div>
+    <div class="hero-content">
+      <div class="eyebrow">STREAMFLIX</div>
+      <h1>THE BIG BANG<br><span>THEORY</span></h1>
+      <div class="hero-meta"><span class="match">76% Match</span><span>U/A 16+</span><span>12 Seasons</span><span>HD</span></div>
+      <p>Physicists Leonard and Sheldon find their nerd-centric social circle with pals Howard and Raj expanding when aspiring actress Penny moves in next door.</p>
+      <div class="hero-buttons">
+        <button class="primary-btn" data-play="The Big Bang Theory">▶ Play</button>
+        <button class="secondary-btn" data-info="The Big Bang Theory">ⓘ More Info</button>
+      </div>
+    </div>
+    <div class="hero-fade"></div>
+  </section>
+
+  <section class="content-section compact-row" id="tv">
+    <div class="section-heading"><h2>Familiar Favourite Series</h2><span>›</span></div>
+    <div class="poster-row landscape-row" data-row="favourites"></div>
+  </section>
+
+  <section class="content-section compact-row" id="new">
+    <div class="section-heading"><h2>New on StreamFlix</h2><span>›</span></div>
+    <div class="poster-row landscape-row" data-row="new"></div>
+  </section>
+
+  <section class="content-section compact-row">
+    <div class="section-heading"><h2>Get In on the Action</h2><span>›</span></div>
+    <div class="poster-row landscape-row" data-row="action"></div>
+  </section>
+
+  <section class="content-section compact-row">
+    <div class="section-heading"><h2>Continue Watching for You</h2><span>›</span></div>
+    <div class="poster-row landscape-row" data-row="continue"></div>
+  </section>
+
+  <section class="top10-section">
+    <div class="section-heading"><h2>Top 10 Movies on StreamFlix Today</h2><span>›</span></div>
+    <div class="top10-row" data-row="top10"></div>
+  </section>
+
+  <section class="content-section compact-row">
+    <div class="section-heading"><h2>Because You Watched</h2><span>›</span></div>
+    <div class="poster-row landscape-row" data-row="popular"></div>
+  </section>
+
+  <section class="reasons">
+    <div class="section-heading centered"><h2>More reasons to join</h2></div>
+    <div class="reason-grid">
+      <article class="reason-card"><div class="reason-icon">▣</div><h3>Enjoy on your TV</h3><p>Watch on smart TVs, streaming devices, game consoles and more.</p></article>
+      <article class="reason-card"><div class="reason-icon">↓</div><h3>Download your shows</h3><p>Save your favourites and watch offline whenever you want.</p></article>
+      <article class="reason-card"><div class="reason-icon">⌁</div><h3>Watch everywhere</h3><p>Stream on your phone, laptop, tablet or TV.</p></article>
+      <article class="reason-card"><div class="reason-icon">♡</div><h3>Create profiles</h3><p>Give everyone a personalised experience with separate profiles.</p></article>
+    </div>
+  </section>
+</main>
+<footer>
+    <div class="footer-inner">
+      <p>Questions? Call 000-800-000-0000</p>
+      <div class="footer-grid">
+        <a href="#">FAQ</a><a href="#">Help Centre</a><a href="#">Account</a><a href="#">Media Centre</a>
+        <a href="#">Investor Relations</a><a href="#">Jobs</a><a href="#">Ways to Watch</a><a href="#">Terms of Use</a>
+        <a href="#">Privacy</a><a href="#">Cookie Preferences</a><a href="#">Corporate Information</a><a href="#">Contact Us</a>
+      </div>
+      <select aria-label="Language"><option>English</option><option>हिन्दी</option></select>
+      <small>© 2026 StreamFlix UI Demo · Built with HTML, CSS & JavaScript</small>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose">×</button>
+      <div class="modal-art" id="modalArt"></div>
+      <div class="modal-body">
+        <h2 id="modalTitle"></h2>
+        <div id="modalMeta" class="hero-meta"></div>
+        <p id="modalText"></p>
+        <button class="primary-btn" id="modalPlay">▶ Play</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
